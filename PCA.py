@@ -8,6 +8,4 @@ def image_projection(testimage, im_average, eigen_images, row_num, col_num):
         testimage  : Imagen que se proyectara en el eigenespacio
         im_average : Imagen promedio del eigenespacio generado
         
-    Ejemplos
     """
-    print("Imprimiendo")
