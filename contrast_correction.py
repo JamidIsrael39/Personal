@@ -27,9 +27,9 @@ def contrast_correction_per_sample(testimage, sampleimage, sigma = 1.5, graph = 
     x, y = sample.shape
     sample = sample.reshape(x * y, 1)
     mean = np.mean(sample)
-    StdDev = np.std(sample, axis = 0)
-    minA = mean - (StdDev * sigma)
-    maxA = mean + (StdDev * sigma)
+    StdDvt = np.std(sample, axis = 0)
+    minA = mean - (StdDvt * sigma)
+    maxA = mean + (StdDvt * sigma)
     image_correction = 255 * (testimage - minA) / (maxA - minA) + 2.2250738585072014e-308
     image_correction = np.clip(image_correction, 0, 255)
     
